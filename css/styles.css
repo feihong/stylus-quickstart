@@ -1,0 +1,12 @@
+h1 {
+  background-color: peach;
+}
+p:first-child {
+  font-family: "Avenir", Helvetica;
+}
+p:nth-child(2) {
+  font-size: 0.9rem;
+}
+p:last-child {
+  font-style: italic;
+}
