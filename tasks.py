@@ -7,7 +7,7 @@ from invoke import task
 @task
 def serve(ctx):
     with run_child_process('gulp watch'):
-        run('python -m http.server')
+        run('cd static && python -m http.server')
 
 
 def run(cmd):

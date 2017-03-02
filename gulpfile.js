@@ -1,15 +1,16 @@
 const gulp = require('gulp')
 const stylus = require('gulp-stylus')
 
+const stylusGlob = './src/**/*.styl'
 
 gulp.task('build', () => {
-  gulp.src('./src/*.styl')
+  gulp.src(stylusGlob)
     .pipe(stylus())
-    .pipe(gulp.dest('./css'))
+    .pipe(gulp.dest('./static/css'))
 })
 
 gulp.task('watch', () => {
-  gulp.watch('./src/*.styl', ['build'])
+  gulp.watch(stylusGlob, ['build'])
 })
 
 gulp.task('default', ['build'])
