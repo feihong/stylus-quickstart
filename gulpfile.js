@@ -1,7 +1,7 @@
 const gulp = require('gulp')
 const stylus = require('gulp-stylus')
 
-const stylusGlob = './src/**/*.styl'
+const stylusGlob = './src/**/[^_]*.styl'
 
 gulp.task('build', () => {
   gulp.src(stylusGlob)
