@@ -5,7 +5,8 @@ const stylusGlob = './src/**/[^_]*.styl'
 
 gulp.task('build', () => {
   gulp.src(stylusGlob)
-    .pipe(stylus())
+    // Set src as a directory where any .styl files can import from.
+    .pipe(stylus({include: './src'}))
     .pipe(gulp.dest('./static/css'))
 })
 
